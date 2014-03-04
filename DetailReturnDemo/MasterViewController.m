@@ -7,8 +7,7 @@
 //
 
 #import "MasterViewController.h"
-
-#import "DetailViewController.h"
+#import "ChoicesViewController.h"
 
 @interface MasterViewController () {
     NSMutableArray *_objects;
@@ -82,12 +81,13 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+    NSLog(@"sadas");
+    if ([[segue identifier] isEqualToString:@"ShowChoices"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSDate *object = _objects[indexPath.row];
-        DetailViewController *controller = [segue destinationViewController];
-        [controller setDelegate:self];
-        [controller setDetailItem:object];
+        ChoicesViewController *controller = [segue destinationViewController];
+//        [controller setDelegate:self];
+//        [controller setDetailItem:object];
     }
 }
 

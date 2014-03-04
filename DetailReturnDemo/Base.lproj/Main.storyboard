@@ -53,7 +53,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="Smm-Og-Njj" kind="push" identifier="ShowChoices" trigger="accessoryAction" id="6LT-U0-oe2"/>
+                                    <segue destination="Smm-Og-Njj" kind="push" identifier="ShowChoices" id="SKN-pl-Jvw"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -69,16 +69,16 @@
             </objects>
             <point key="canvasLocation" x="459" y="64"/>
         </scene>
-        <!--Table View Controller - Choices-->
+        <!--Choices View Controller - Choices-->
         <scene sceneID="9W8-vt-gbK">
             <objects>
-                <tableViewController id="Smm-Og-Njj" sceneMemberID="viewController">
+                <tableViewController id="Smm-Og-Njj" customClass="ChoicesViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mVw-96-xF6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="xfk-aF-Y9d" style="IBUITableViewCellStyleDefault" id="JRc-Wa-6s4">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="xfk-aF-Y9d" style="IBUITableViewCellStyleDefault" id="JRc-Wa-6s4">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JRc-Wa-6s4" id="U8H-yD-xcz">

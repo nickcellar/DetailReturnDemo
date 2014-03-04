@@ -22,6 +22,7 @@
 		E1A6194418C5814600BC204C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A6192318C5814600BC204C /* UIKit.framework */; };
 		E1A6194C18C5814600BC204C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1A6194A18C5814600BC204C /* InfoPlist.strings */; };
 		E1A6194E18C5814600BC204C /* DetailReturnDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A6194D18C5814600BC204C /* DetailReturnDemoTests.m */; };
+		E1A6195918C5880900BC204C /* ChoicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A6195818C5880900BC204C /* ChoicesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		E1A6194918C5814600BC204C /* DetailReturnDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DetailReturnDemoTests-Info.plist"; sourceTree = "<group>"; };
 		E1A6194B18C5814600BC204C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E1A6194D18C5814600BC204C /* DetailReturnDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailReturnDemoTests.m; sourceTree = "<group>"; };
+		E1A6195718C5880900BC204C /* ChoicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoicesViewController.h; sourceTree = "<group>"; };
+		E1A6195818C5880900BC204C /* ChoicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoicesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				E1A6193818C5814600BC204C /* DetailViewController.m */,
 				E1A6193A18C5814600BC204C /* Images.xcassets */,
 				E1A6192618C5814600BC204C /* Supporting Files */,
+				E1A6195718C5880900BC204C /* ChoicesViewController.h */,
+				E1A6195818C5880900BC204C /* ChoicesViewController.m */,
 			);
 			path = DetailReturnDemo;
 			sourceTree = "<group>";
@@ -254,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1A6195918C5880900BC204C /* ChoicesViewController.m in Sources */,
 				E1A6193018C5814600BC204C /* AppDelegate.m in Sources */,
 				E1A6193618C5814600BC204C /* MasterViewController.m in Sources */,
 				E1A6192C18C5814600BC204C /* main.m in Sources */,
