@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MasterViewController : UITableViewController
+@protocol MasterViewControllerProtocol
+- (void)setData:(NSData *)data;
+@end
+
+@interface MasterViewController : UITableViewController <MasterViewControllerProtocol>
 
 @end

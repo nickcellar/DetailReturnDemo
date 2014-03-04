@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MasterViewController.h"
 
 @interface DetailViewController : UIViewController
-
+@property (nonatomic, weak) id<MasterViewControllerProtocol> delegate;
 @property (strong, nonatomic) id detailItem;
-
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @end
