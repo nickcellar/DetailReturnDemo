@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @protocol MasterViewControllerProtocol
-- (void)setData:(NSData *)data;
+- (void)updateItem:(int)itemId withChoice:(NSString *)choice;
 @end
 
 @interface MasterViewController : UITableViewController <MasterViewControllerProtocol>

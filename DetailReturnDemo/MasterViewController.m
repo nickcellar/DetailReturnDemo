@@ -10,7 +10,8 @@
 #import "ChoicesViewController.h"
 
 @interface MasterViewController () {
-    NSMutableArray *_objects;
+    NSMutableArray *_items;
+    NSMutableArray *_choices;
 }
 @end
 
@@ -20,12 +21,19 @@
 {
     [super viewDidLoad];
     
-    // init data
-    _objects = [[NSMutableArray alloc] init];
-    [_objects addObject:@"One"];
-    [_objects addObject:@"Two"];
-    [_objects addObject:@"Three"];
-    [_objects addObject:@"Four"];
+    // init items
+    _items = [[NSMutableArray alloc] init];
+    [_items addObject:@"One"];
+    [_items addObject:@"Two"];
+    [_items addObject:@"Three"];
+    [_items addObject:@"Four"];
+    
+    // init choices
+    _choices = [[NSMutableArray alloc] init];
+    [_choices addObject:@"?"];
+    [_choices addObject:@"?"];
+    [_choices addObject:@"?"];
+    [_choices addObject:@"?"];
 }
 
 #pragma mark - Table View
@@ -37,13 +45,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return _items.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.textLabel.text = _objects[indexPath.row];
+    cell.textLabel.text = _items[indexPath.row];
+    cell.detailTextLabel.text = _choices[indexPath.row];
     return cell;
 }
 
@@ -56,7 +65,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [_objects removeObjectAtIndex:indexPath.row];
+        [_items removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
@@ -81,14 +90,18 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSLog(@"sadas");
     if ([[segue identifier] isEqualToString:@"ShowChoices"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
         ChoicesViewController *controller = [segue destinationViewController];
-//        [controller setDelegate:self];
-//        [controller setDetailItem:object];
+        [controller setDelegate:self];
+        [controller setItemId:indexPath.row];
     }
+}
+
+- (void)updateItem:(int)itemId withChoice:(NSString *)choice
+{
+    _choices[itemId] = choice;
+    [self.tableView reloadData];
 }
 
 @end

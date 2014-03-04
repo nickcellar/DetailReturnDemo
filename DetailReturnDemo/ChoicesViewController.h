@@ -10,5 +10,6 @@
 #import "MasterViewController.h"
 
 @interface ChoicesViewController : UITableViewController
+@property int itemId;
 @property (nonatomic, weak) id<MasterViewControllerProtocol> delegate;
 @end

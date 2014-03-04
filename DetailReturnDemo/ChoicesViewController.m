@@ -46,4 +46,10 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [_delegate updateItem:_itemId withChoice:_objects[indexPath.row]];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 @end
